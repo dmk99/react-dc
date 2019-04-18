@@ -1,6 +1,6 @@
 {
   "name": "@david.kucsai/react-dc",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React bindings for dc.js charts",
   "main": "dist/react-dc.js",
   "module": "dist/module/react-dc.js",
