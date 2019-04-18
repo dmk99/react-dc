@@ -6,8 +6,9 @@ import marginMixin from '../mixins/margin-mixin'
 import capMixin from '../mixins/cap-mixin'
 import colorMixin from '../mixins/color-mixin'
 import rowMixin from '../mixins/row-mixin'
+import PropTypes from "prop-types";
 
-const {any, bool, number, oneOfType} = React.PropTypes
+const {any, bool, number, oneOfType} = PropTypes;
 
 @rowMixin
 @colorMixin
@@ -15,11 +16,11 @@ const {any, bool, number, oneOfType} = React.PropTypes
 @marginMixin
 @baseMixin
 export default class RowChart extends BaseChart{
-  static displayName = 'RowChart'
+  static displayName = 'RowChart';
 
   componentDidMount(){
-    this.chart = dc.rowChart(this.chart)
-    this.configure()
-    this.chart.render()
+    this.chart = dc.rowChart(this.chart);
+    this.configure();
+    this.chart.render();
   }
 }

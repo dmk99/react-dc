@@ -16,17 +16,10 @@ React-dc is a wrapper around [dc.js charts](http://dc-js.github.io/dc.js/) for R
 
 ### Using npm *(recommended)*
 ```
-npm install --save react-dc
+npm install --save @david.kucsai/react-dc
 ```
 
-### Without npm
-An UMD build is available on [unpkg](https://unpkg.com):
-```html
-<script src="https://unpkg.com/react-dc"></script>
-<link rel="stylesheet" src="https://unpkg.com/react-dc/dist/react-dc.css">
-```
-
-**Warning:** You will also need [React](https://www.npmjs.com/package/react), which is a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this library. The reasoning behind this is that you are probably already using React in your project, and don't want to end up with two versions of React in your final bundle. If you haven't already installed React, you can install it from npm with `npm install --save react`, or use a [CDN version](https://cdnjs.com/libraries/react/).
+**Warning:** You will also need [React](https://www.npmjs.com/package/react) and [PropTypes](https://www.npmjs.com/package/prop-types), which is a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of this library. The reasoning behind this is that you are probably already using React in your project, and don't want to end up with two versions of React in your final bundle. If you haven't already installed React, you can install it from npm with `npm install --save react prop-types`, or use a [CDN version](https://cdnjs.com/libraries/react/).
 
 ## Usage
 React-js comes with two versions: an UMD ES5 build, and an ES6 module version to allow for a better integration with your module bundler (like [Webpack](https://webpack.js.org/) or [Rollup](http://rollupjs.org/)), if you use one. Rollup has a [great article on this topic on their wiki](https://github.com/rollup/rollup/wiki/pkg.module).
@@ -51,7 +44,7 @@ import {BarChart} from 'react-dc'
 const records = [{x: 0, y: 1}, {x: 1, y: 3}, {x: 2, y: 5}, {x: 3, y: 1}, {x: 4, y: 2}]
 const data = crossfilter(records)
 const dimension = data.dimension(record => record.x)
-const group = dimenion.group().reduceSum(record => record.y)
+const group = dimension.group().reduceSum(record => record.y)
 
 export default () => <BarChart dimension={dimension} group={group} x={d3.scale.linear().domain([0, 5])} />
 ```

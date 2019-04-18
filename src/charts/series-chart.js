@@ -5,11 +5,11 @@ import seriesMixin from '../mixins/series-mixin'
 
 @seriesMixin
 export default class SeriesChart extends CompositeChart{
-  static displayName = 'SeriesChart'
+  static displayName = 'SeriesChart';
 
   componentDidMount(){
-    this.chart = dc.seriesChart(this.chart)
-    this.configure()
-    this.chart.render()
+    this.chart = dc.seriesChart(this.chart);
+    this.configure();
+    this.chart.render();
   }
 }

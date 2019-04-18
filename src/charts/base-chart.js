@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from "react";
 
-export default class BaseChart extends React.Component{
+export default class BaseChart extends React.PureComponent {
   render(){
-    return <div ref={chart => this.chart = chart}></div>
+    return <div ref={chart => this.chart = chart}/>;
   }
 }

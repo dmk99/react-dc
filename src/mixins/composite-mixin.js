@@ -1,7 +1,8 @@
 import React from 'react'
 import withProps from '../utils.js'
+import PropTypes from "prop-types";
 
-const {arrayOf, bool, object, oneOfType, shape, string} = React.PropTypes
+const {arrayOf, bool, object, oneOfType, shape, string} = PropTypes;
 
 export default withProps({
   alignYAxes: bool,

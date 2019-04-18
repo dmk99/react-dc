@@ -7,12 +7,12 @@ import scatterMixin from '../mixins/scatter-mixin'
 @scatterMixin
 @coordinateGridMixin
 export default class ScatterPlot extends BaseChart{
-  static displayName = 'ScatterPlot'
+  static displayName = 'ScatterPlot';
 
   componentDidMount(){
-    console.log('scatter')
-    this.chart = dc.scatterPlot(this.chart)
-    this.configure()
-    this.chart.render()
+    console.log('scatter');
+    this.chart = dc.scatterPlot(this.chart);
+    this.configure();
+    this.chart.render();
   }
 }

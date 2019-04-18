@@ -1,7 +1,8 @@
 import React from 'react'
 import {withProps} from '../utils'
+import PropTypes from "prop-types";
 
-const {bool, number} = React.PropTypes
+const {bool, number} = PropTypes;
 
 export default withProps({
   alwaysUseRounding: bool,

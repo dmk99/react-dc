@@ -8,12 +8,12 @@ import barMixin from '../mixins/bar-mixin'
 @barMixin
 @stackMixin
 @coordinateGridMixin
-export default class BarChart extends BaseChart{
-  static displayName = 'BarChart'
+export default class BarChart extends BaseChart {
+  static displayName = 'BarChart';
 
   componentDidMount(){
-    this.chart = dc.barChart(this.chart)
-    this.configure()
-    this.chart.render()
+    this.chart = dc.barChart(this.chart);
+    this.configure();
+    this.chart.render();
   }
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import {withProps} from '../utils'
+import PropTypes from "prop-types";
 
 export default withProps({
-  margins: React.PropTypes.shape({
-    left: React.PropTypes.number.isRequired,
-    right: React.PropTypes.number.isRequired,
-    top: React.PropTypes.number.isRequired,
-    bottom: React.PropTypes.number.isRequired
+  margins: PropTypes.shape({
+    left: PropTypes.number.isRequired,
+    right: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    bottom: PropTypes.number.isRequired
   })
 })

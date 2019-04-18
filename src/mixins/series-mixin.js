@@ -1,7 +1,8 @@
 import React from 'react'
 import {withProps} from '../utils'
+import PropTypes from "prop-types";
 
-const {func} = React.PropTypes
+const {func} = PropTypes;
 
 export default withProps({
   chart: func,
